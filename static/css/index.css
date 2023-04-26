@@ -1,6 +1,8 @@
-body {
-    background: rgb(205, 209, 228);
-  }
+body{
+    background-color: #121212 !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 20px;
+}
 
 
 /* General Styles */
@@ -32,12 +34,10 @@ body {
 .upload-area {
     width: 100%;
     max-width: 25rem;
-    background-color: var(--clr-white);
-    box-shadow: 0 10px 60px #dae5ff;
+    color: whitesmoke;
     border: 2px solid var(--clr-light-blue);
-    border-radius: 24px;
-    padding: 2rem 1.875rem 5rem 1.875rem;
-    margin: 0.625rem;
+    border-radius: 5px;
+
     text-align: center;
 }
 .upload-area--open {
@@ -97,7 +97,6 @@ body {
 /* Drop Zoon */
 .upload-area__drop-zoon {
     position: relative;
-    height: 11.25rem;
    /* 180px */
     display: flex;
     justify-content: center;
@@ -108,6 +107,8 @@ body {
     margin-top: 2.1875rem;
     cursor: pointer;
     transition: border-color 300ms ease-in-out;
+    background: #121212;
+    color: blue;
 }
 .upload-area__drop-zoon:hover {
     border-color: var(--clr-blue);
@@ -147,7 +148,7 @@ body {
     padding: 0.3125rem;
     border-radius: 10px;
     display: none;
-    z-index: 1000;
+    /* z-index: 1000; */
     transition: opacity 300ms ease-in-out;
 }
 .drop-zoon:hover .drop-zoon__preview-image {
@@ -273,7 +274,7 @@ body {
     color: var(--clr-light-gray);
 }
 
-.submit {
+/* .submit {
 	background: #fff;
 	color: #957995;
 	box-shadow: 2px 2px 10px -5px;
@@ -284,7 +285,7 @@ body {
 	text-transform: lowercase;
 	text-decoration: none;
 	border: 0;
-}
+} */
 
 .submit:hover {
 	transform: translate(-10px, -10px);
@@ -328,34 +329,4 @@ body {
 	content:"ted"
 }
 
-/* heading css */
-.the-type {
-    display: flex;
-    justify-content: center;    
-    width: 100%;
-  }
-  .typeing {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 50px;
-    display: inline;
-    background: linear-gradient(
-      45deg,
-      rgb(0, 143, 104),
-      rgb(172, 51, 233),
-      rgb(250, 224, 66)
-    );
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    color: transparent;
-    text-transform: capitalize;
-    border-right-style: solid;
-    border-width: 10px;
-    border-image: linear-gradient(
-        45deg,
-        rgb(0, 143, 104),
-        rgb(172, 51, 233),
-        rgb(250, 224, 66)
-      )
-      1;
-  }
 

@@ -138,6 +138,7 @@ function uploadFile(file) {
       }, 500); // 0.5s
 
       // Add The (fileReader) Result Inside (previewImage) Source
+      
       previewImage.setAttribute('src', fileReader.result);
 
       // Add File Name Inside Uploaded File Name
@@ -207,25 +208,25 @@ function fileValidate(fileType, fileSize) {
   };
 };
 
-// heading animation
-let textType = document.querySelector('.typeing')
-let textArray = textType.dataset.typeingtext.split("")
-let typeCount = 0;
+// // heading animation
+// let textType = document.querySelector('.typeing')
+// let textArray = textType.dataset.typeingtext.split("")
+// let typeCount = 0;
 
-let autoTypeText = () => {
-    if(typeCount < textType.dataset.typeingtext.length){
-        textType.innerHTML += textType.dataset.typeingtext.charAt(typeCount)
-        typeCount++
-        textArray = textType.dataset.typeingtext.split("")
-    }else {
-        textArray.pop()
-        textType.innerHTML = textArray.join("")
-        if(textArray.length == 0){
-            typeCount = 0
-        }
-    }  
-}
-setInterval(() => {
-    autoTypeText()
-},150)
+// let autoTypeText = () => {
+//     if(typeCount < textType.dataset.typeingtext.length){
+//         textType.innerHTML += textType.dataset.typeingtext.charAt(typeCount)
+//         typeCount++
+//         textArray = textType.dataset.typeingtext.split("")
+//     }else {
+//         textArray.pop()
+//         textType.innerHTML = textArray.join("")
+//         if(textArray.length == 0){
+//             typeCount = 0
+//         }
+//     }  
+// }
+// setInterval(() => {
+//     autoTypeText()
+// },150)
 

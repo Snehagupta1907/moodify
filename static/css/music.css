@@ -1,16 +1,15 @@
 
-body {
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-  }
+body{
+  background-color: #121212 !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 20px;
+}
   
   .player {
     margin: auto;
-    margin-top: 25vh;
     display: flex;
     align-items: center;
     flex-direction: column;
-    left: 50%;
   }
 
 .heading-secondary {
@@ -20,8 +19,5 @@ body {
   text-transform: uppercase;
   transition: all 0.2s;
 }
-.heading-secondary:hover {
-  transform: skewx(15deg) skewy(2deg) scale(1.1);
-  text-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
-}
+
 
