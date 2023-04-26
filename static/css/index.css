@@ -1,6 +1,5 @@
 body {
-    background: rgb(205, 209, 228);
-  }
+    background: rgb(205, 209, 228);}
 
 
 /* General Styles */
@@ -48,11 +47,11 @@ body {
     from {
         height: 28.125rem;
        /* 450px */
-   }
+}
     to {
         height: 35rem;
        /* 560px */
-   }
+}
 }
 /* Header */
 .upload-area__title {
@@ -252,11 +251,11 @@ body {
     from {
         width: 0%;
         background-color: transparent;
-   }
+}
     to {
         width: 100%;
         background-color: var(--clr-blue);
-   }
+}
 }
 .uploaded-file__name {
     width: 100%;
@@ -333,16 +332,16 @@ body {
     display: flex;
     justify-content: center;    
     width: 100%;
-  }
-  .typeing {
+}
+.typeing {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 50px;
     display: inline;
     background: linear-gradient(
-      45deg,
-      rgb(0, 143, 104),
-      rgb(172, 51, 233),
-      rgb(250, 224, 66)
+    45deg,
+    rgb(0, 143, 104),
+    rgb(172, 51, 233),
+    rgb(250, 224, 66)
     );
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -354,8 +353,6 @@ body {
         45deg,
         rgb(0, 143, 104),
         rgb(172, 51, 233),
-        rgb(250, 224, 66)
-      )
-      1;
-  }
-
+        rgb(250, 224, 66))
+    1;
+}

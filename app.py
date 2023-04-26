@@ -59,7 +59,7 @@ def run_classifier(file_):
 @app.route('/',methods=["GET","POST"])
 def home():
     if request.method=="POST":
-       
+    
         files = request.files
         image = files.get('file')
         

@@ -9,15 +9,35 @@
     <title>moodify</title>
     <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+    theme: {
+        extend: {
+        colors: {
+            clifford: '#da373d',
+        }
+        }
+    }
+    }
+    </script>
+    
+
 </head>
 
-<body>
-    <div class="root">
+<body class="flex flex-col">
+    <h1 class="text-3xl font-bold underline text-clifford">
+    Hello world!
+  </h1>
+    <div class="">
         <div class="the-type">
             <h1 class="typeing" data-typeingText="Song based on Your Mood"></h1>
         </div>
+    </div>
+    <div class="root">
+        
             <!-- Upload Area -->
-        <form action="#" method="post" enctype="multipart/form-data">
+        <form action="#"  method="post" enctype="multipart/form-data">
             <div id="uploadArea" class="upload-area">
                 <!-- Header -->
                 <div class="upload-area__header">
@@ -42,7 +62,11 @@
                 <img src="" alt="Preview Image" id="previewImage" class="drop-zoon__preview-image" draggable="false">
                 <input type="file" id="fileInput" class="drop-zoon__file-input" name="file" accept="image/*">
                 </div>
-            <!-- End Drop Zoon -->
+            <!-- End Drop Zone -->
+
+            <!-- Camera Button
+        <button id="capture">Take Picture</button>
+        <canvas id="canvas" width="640" height="480"></canvas> -->
         
             <!-- File Details -->
             <div id="fileDetails" class="upload-area__file-details file-details">
