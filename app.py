@@ -38,11 +38,11 @@ app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 mood_playlists = {
     'Disgust': get_playlist_id_for_mood('lofi', sp),
     'Fear': get_playlist_id_for_mood('calm', sp),
-    'Happy': get_playlist_id_for_mood('energetic/hi', sp),
+    'Happy': get_playlist_id_for_mood('energetic', sp),
     'Neutral': get_playlist_id_for_mood('playful', sp),
     'Sad': get_playlist_id_for_mood('happiness', sp),
     'Surprise': get_playlist_id_for_mood('surprise', sp),
-    'Angry': get_playlist_id_for_mood('lofi', sp)
+    'Angry': get_playlist_id_for_mood('lofi hindi', sp)
 }
 
 songs = {
