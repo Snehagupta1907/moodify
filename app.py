@@ -10,8 +10,8 @@ from mood_playlist import get_playlist_id_for_mood
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
-client_id = 'your client id'
-client_secret = 'your sercret key'
+client_id = '40058f3d1557477cb3176fb9c2a7dd6e'
+client_secret = '4fa92785b1f44c1f8be34676eb7d0f05'
 
     # Authenticate with Spotify API
 client_credentials_manager = SpotifyClientCredentials(client_id, client_secret)
@@ -20,7 +20,7 @@ sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
 
 UPLOAD_FOLDER = os.path.join(os.getcwd(),"images")
-app = Flask(__name__)
+app = Flask(_name_)
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 #token = ""
 
@@ -84,31 +84,28 @@ def run_classifier(file_):
             label=emotion_labels[prediction.argmax()]
             return label
         
-@app.route('/get')
-def get():
-    return {"Hello": "world"}
 
-@app.route('/predict',methods=["GET","POST"])
+
+@app.route('/',methods=["GET","POST"])
 def home():
     if request.method=="POST":
     
         files = request.files
         image = files.get('file')
-        flash("No image selected",image)
+        
         if image.filename == '':
-            flash("No image selected")
-            return {"Error":"No Image Is Detected"}
+            flash("no image selected")
+            return redirect(request.url)
         else:
             filename = secure_filename(image.filename)
             image.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             image_path = os.path.join(UPLOAD_FOLDER,filename)
             mood = run_classifier(image_path)
-            print(mood)
+            
             # the first argument in url_for takes the function name, NOT the actual endpoint
-            # return redirect(url_for("music", mood=songs[mood],mood_type=mood))
-            return { mood:songs[mood],mood_type:mood}
+            return redirect(url_for("music", mood=songs[mood],mood_type=mood))
 
-    return {"Mood":"No mood detected"}
+    return render_template('index.html')
 
 
 @app.route('/music/<mood>/<mood_type>',methods=["GET","POST"])
@@ -118,8 +115,9 @@ def music(mood,mood_type):
         "mood_type":mood_type,
         "mood":mood
     }
-    return {"context":context}
+    return render_template('musicplayer.html',context=context)
 
 
-if __name__=='__main__':
-    app.run(debug=True)
+if _name=='main_':
+    app.run(port=5002,
+    debug=True)
