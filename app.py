@@ -6,6 +6,16 @@ from keras.utils import img_to_array
 import cv2
 import numpy as np
 import os 
+from mood_playlist import get_playlist_id_for_mood
+import spotipy
+from spotipy.oauth2 import SpotifyClientCredentials
+
+client_id = 'your client id'
+client_secret = 'your sercret key'
+
+    # Authenticate with Spotify API
+client_credentials_manager = SpotifyClientCredentials(client_id, client_secret)
+sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
 
 
@@ -14,15 +24,35 @@ app = Flask(__name__)
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 #token = ""
 
-songs = {
+# songs = {
 
-    'Disgust':"7zpZFvJpcZC2uYgdSZNfuA",
-    'Fear':"405PXg1fJunIlSo75L78Kb",
-    'Happy':"4PY9rbCQSo2JvGdgREogIe",
-    'Neutral':"3C7FXzgUwDq7hY68lW5B2d", 
-    'Sad':"4YOfhHpjPB0tq29NPpDY3F", 
-    'Surprise':"7vatYrf39uVaZ8G2cVtEik",
-    'Angry':"0l9dAmBrUJLylii66JOsHB"
+#     'Disgust':"7zpZFvJpcZC2uYgdSZNfuA",
+#     'Fear':"6WiMSiEX3FleOOQimEKzVQ",
+#     'Happy':"4PY9rbCQSo2JvGdgREogIe",
+#     'Neutral':"3C7FXzgUwDq7hY68lW5B2d", 
+#     'Sad':"37i9dQZF1DX3rxVfibe1L0", 
+#     'Surprise':"7vatYrf39uVaZ8G2cVtEik",
+#     'Angry':"0l9dAmBrUJLylii66JOsHB"
+# }
+
+mood_playlists = {
+    'Disgust': get_playlist_id_for_mood('lofi', sp),
+    'Fear': get_playlist_id_for_mood('calm', sp),
+    'Happy': get_playlist_id_for_mood('energetic', sp),
+    'Neutral': get_playlist_id_for_mood('playful', sp),
+    'Sad': get_playlist_id_for_mood('happiness', sp),
+    'Surprise': get_playlist_id_for_mood('surprise', sp),
+    'Angry': get_playlist_id_for_mood('lofi hindi', sp)
+}
+
+songs = {
+    'Disgust': mood_playlists['Disgust'],
+    'Fear': mood_playlists['Fear'],
+    'Happy': mood_playlists['Happy'],
+    'Neutral': mood_playlists['Neutral'],
+    'Sad': mood_playlists['Sad'],
+    'Surprise': mood_playlists['Surprise'],
+    'Angry': mood_playlists['Angry']
 }
 
 def run_classifier(file_):
@@ -61,7 +91,7 @@ def get():
 @app.route('/predict',methods=["GET","POST"])
 def home():
     if request.method=="POST":
-       
+    
         files = request.files
         image = files.get('file')
         flash("No image selected",image)
