@@ -54,28 +54,31 @@ def run_classifier(file_):
             label=emotion_labels[prediction.argmax()]
             return label
         
+@app.route('/get')
+def get():
+    return {"Hello": "world"}
 
-
-@app.route('/',methods=["GET","POST"])
+@app.route('/predict',methods=["GET","POST"])
 def home():
     if request.method=="POST":
        
         files = request.files
         image = files.get('file')
-        
+        flash("No image selected",image)
         if image.filename == '':
-            flash("no image selected")
-            return redirect(request.url)
+            flash("No image selected")
+            return {"Error":"No Image Is Detected"}
         else:
             filename = secure_filename(image.filename)
             image.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             image_path = os.path.join(UPLOAD_FOLDER,filename)
             mood = run_classifier(image_path)
-            
+            print(mood)
             # the first argument in url_for takes the function name, NOT the actual endpoint
-            return redirect(url_for("music", mood=songs[mood],mood_type=mood))
+            # return redirect(url_for("music", mood=songs[mood],mood_type=mood))
+            return { mood:songs[mood],mood_type:mood}
 
-    return render_template('index.html')
+    return {"Mood":"No mood detected"}
 
 
 @app.route('/music/<mood>/<mood_type>',methods=["GET","POST"])
@@ -85,7 +88,7 @@ def music(mood,mood_type):
         "mood_type":mood_type,
         "mood":mood
     }
-    return render_template('musicplayer.html',context=context)
+    return {"context":context}
 
 
 if __name__=='__main__':
