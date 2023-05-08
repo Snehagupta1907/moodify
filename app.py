@@ -10,8 +10,8 @@ from mood_playlist import get_playlist_id_for_mood
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
-client_id = 'your client id'
-client_secret = 'your sercret key'
+client_id = '40058f3d1557477cb3176fb9c2a7dd6e'
+client_secret = '4fa92785b1f44c1f8be34676eb7d0f05'
 
     # Authenticate with Spotify API
 client_credentials_manager = SpotifyClientCredentials(client_id, client_secret)
@@ -119,4 +119,5 @@ def music(mood,mood_type):
 
 
 if __name__=='__main__':
-    app.run(debug=True)
+    app.run(port=5002,
+    debug=True)
