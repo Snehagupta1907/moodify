@@ -4,7 +4,7 @@ import {
   ThirdSection,
   FourthSection,
   FifthSection,
-} from "../components/sections.js";
+} from "../components/sections";
 import { useAccount } from "wagmi";
 export default function Home() {
   const { address } = useAccount();
@@ -12,7 +12,7 @@ export default function Home() {
     <>
       {address ? (
         <div className="pt-28 md:pl-72 p-8">
-          <FirstSection title="Spotify Playlists" />
+          <FirstSection title="Moodify Playlists" />
           <SecondSection title="Chill" />
           <ThirdSection title="Pill" />
           <FourthSection title="Drill" />

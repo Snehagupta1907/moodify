@@ -1,7 +1,7 @@
 {
-  "name": "spotify-project",
+  "name": "moodify",
   "version": "0.0.1",
-  "author": "subuthai",
+  "author": "moodify",
   "homepage": "",
   "private": true,
   "proxy": "http://127.0.0.1:5000",
@@ -19,6 +19,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.6.0",
+    "react-toastify": "^9.1.2",
     "wagmi": "^0.12.12"
   },
   "devDependencies": {

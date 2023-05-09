@@ -1,9 +1,11 @@
 import { useState } from "react";
 import Head from "next/head";
-import Header from "../components/header.js";
-import Sidebar from "../components/sidebar.js";
+import Header from "../components/header";
+import Sidebar from "../components/sidebar";
 import "../styles/globals.css";
 import { WagmiConfig, createClient } from "wagmi";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {
   avalanche,
   bsc,
@@ -18,7 +20,7 @@ import {
 } from "connectkit";
 import DataContextProvider from "../utils/context.js";
 const alchemyId = "iSoLFoQDND_y0a4IOLotRoJ-ZPy2r5it";
-const chains = [avalanche, bsc, mainnet, localhost, polygonMumbai];
+const chains = [polygonMumbai];
 const client = createClient(
   getDefaultClient({
     appName: "MOODI-FY",
@@ -52,6 +54,7 @@ function MyApp({ Component, pageProps }) {
               <main>
                 <Component {...pageProps} />
               </main>
+              <ToastContainer />
             </div>
           </DataContextProvider>
         </ConnectKitProvider>

@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React,{useContext} from "react";
 import { RiPlayFill } from "react-icons/ri";
-
+import { DataContext } from "../utils/context";
 const FirstCard = () => {
+
+  const {mintingMusic} = useContext(DataContext);
   return (
-    <Link
-      href="#"
+    <div
+      
       className="bg-main-lg rounded-lg p-4 hover:bg-main-lgHover transition-all group"
     >
       <div className="mb-4 relative">
@@ -23,21 +25,24 @@ const FirstCard = () => {
         <p className="text-gray-400 text-sm w-[18ch]">
           Taylor Swift is on top of the Hottest 50!
         </p>
+        <p className="text-yellow-400 mt-2 text-sm w-[18ch] font-bold">20.34 ETH</p>
       </div>
       <button
         type="button"
+        onClick={() =>mintingMusic("https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png","Swift","Taylor",2023,"https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png")}
         className="mt-3 text-smtext-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
       >
-        Mint
+       Transfer
       </button>
-    </Link>
+    </div>
   );
 };
 
 const SecondCard = () => {
+  const {mintingMusic} = useContext(DataContext);
   return (
-    <Link
-      href="#"
+    <div
+      
       className="bg-main-lg rounded-lg p-4 hover:bg-main-lgHover transition-all group"
     >
       <div className="mb-4 relative">
@@ -54,21 +59,24 @@ const SecondCard = () => {
         <p className="text-gray-400 text-sm w-[18ch]">
           Music from Drake, 21 Savage, Lil Uzi Vert and more.
         </p>
+        <p className="text-yellow-400 mt-2 text-sm w-[18ch] font-bold">3.4 ETH</p>
       </div>
       <button
         type="button"
+        onClick={() =>mintingMusic("https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png","Swift","Taylor",2023,"https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png")}
         className="mt-3 text-smtext-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
       >
-        Mint
+       Transfer
       </button>
-    </Link>
+    </div>
   );
 };
 
 const ThirdCard = () => {
+  const {mintingMusic} = useContext(DataContext);
   return (
-    <Link
-      href="#"
+    <div
+      
       className="bg-main-lg rounded-lg p-4 hover:bg-main-lgHover transition-all group"
     >
       <div className="mb-4 relative">
@@ -85,21 +93,24 @@ const ThirdCard = () => {
         <p className="text-gray-400 text-sm w-[18ch]">
           The biggest songs of the 2010s.
         </p>
+        <p className="text-yellow-400 mt-2 text-sm w-[18ch] font-bold">9.34 ETH</p>
       </div>
       <button
         type="button"
+        onClick={() =>mintingMusic("https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png","Swift","Taylor",2023,"https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png")}
         className="mt-3 text-smtext-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
       >
-        Mint
+       Transfer
       </button>
-    </Link>
+    </div>
   );
 };
 
 const FourthCard = () => {
+  const {mintingMusic} = useContext(DataContext);
   return (
-    <Link
-      href="#"
+    <div
+      
       className="bg-main-lg rounded-lg p-4 hover:bg-main-lgHover transition-all group"
     >
       <div className="mb-4 relative">
@@ -117,21 +128,24 @@ const FourthCard = () => {
           Rock legends & epic songs that continue to inspire generations. Cover:
           Guns N&#39; Roses
         </p>
+        <p className="text-yellow-400 mt-2 text-sm w-[18ch] font-bold">20.34 ETH</p>
         <button
           type="button"
+          onClick={() =>mintingMusic("https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png","Swift","Taylor",2023,"https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png")}
           className="text-white mt-3 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
         >
-          Mint
+         Transfer
         </button>
       </div>
-    </Link>
+    </div>
   );
 };
 
 const FifthCard = () => {
+  const {mintingMusic} = useContext(DataContext);
   return (
-    <Link
-      href="#"
+    <div
+ 
       className="bg-main-lg rounded-lg p-4 hover:bg-main-lgHover transition-all group"
     >
       <div className="mb-4 relative">
@@ -148,21 +162,24 @@ const FifthCard = () => {
         <p className="text-gray-400 text-sm w-[18ch]">
           Gentle ambient piano to help you fall asleep.
         </p>
+        <p className="text-yellow-400 mt-2 text-sm w-[18ch] font-bold">0.34 ETH</p>
       </div>
       <button
         type="button"
+        onClick={() =>mintingMusic("https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png","Swift","Taylor",2023,"https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png")}
         className="mt-3 text-smtext-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
       >
-        Mint
+       Transfer
       </button>
-    </Link>
+    </div>
   );
 };
 
 const SixthCard = () => {
+  const {mintingMusic} = useContext(DataContext);
   return (
-    <Link
-      href="#"
+    <div
+      
       className="bg-main-lg rounded-lg p-4 hover:bg-main-lgHover transition-all group"
     >
       <div className="mb-4 relative">
@@ -179,21 +196,24 @@ const SixthCard = () => {
         <p className="text-gray-400 text-sm w-[18ch]">
           Drift away with enthralling instrumentals.
         </p>
+        <p className="text-yellow-400 mt-2 text-sm w-[18ch] font-bold">1.21 ETH</p>
       </div>
       <button
         type="button"
+        onClick={() =>mintingMusic("https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png","Swift","Taylor",2023,"https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png")}
         className="mt-3 text-smtext-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
       >
-        Mint
+       Transfer
       </button>
-    </Link>
+    </div>
   );
 };
 
 const SeventhCard = () => {
+  const {mintingMusic} = useContext(DataContext);
   return (
-    <Link
-      href="#"
+    <div
+      
       className="bg-main-lg rounded-lg p-4 hover:bg-main-lgHover transition-all group"
     >
       <div className="mb-4 relative">
@@ -210,21 +230,24 @@ const SeventhCard = () => {
         <p className="text-gray-400 text-sm w-[18ch]">
           Relax and indulge with beautiful piano pieces
         </p>
+        <p className="text-yellow-400 mt-2 text-sm w-[18ch] font-bold">20.34 ETH</p>
       </div>
       <button
         type="button"
+        onClick={() =>mintingMusic("https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png","Swift","Taylor",2023,"https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png")}
         className="mt-3 text-smtext-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
       >
-        Mint
+       Transfer
       </button>
-    </Link>
+    </div>
   );
 };
 
 const EighthCard = () => {
+  const {mintingMusic} = useContext(DataContext);
   return (
-    <Link
-      href="#"
+    <div
+      
       className="bg-main-lg rounded-lg p-4 hover:bg-main-lgHover transition-all group"
     >
       <div className="mb-4 relative">
@@ -241,21 +264,24 @@ const EighthCard = () => {
         <p className="text-gray-400 text-sm w-[18ch]">
           Keep calm and focus with ambient and post-rock music.
         </p>
+        <p className="text-yellow-400 mt-2 text-sm w-[18ch] font-bold">11.34 ETH</p>
       </div>
       <button
         type="button"
+        onClick={() =>mintingMusic("https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png","Swift","Taylor",2023,"https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png")}
         className="mt-3 text-smtext-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
       >
-        Mint
+       Transfer
       </button>
-    </Link>
+    </div>
   );
 };
 
 const NinthCard = () => {
+  const {mintingMusic} = useContext(DataContext);
   return (
-    <Link
-      href="#"
+    <div
+      
       className="bg-main-lg rounded-lg p-4 hover:bg-main-lgHover transition-all group"
     >
       <div className="mb-4 relative">
@@ -272,21 +298,24 @@ const NinthCard = () => {
         <p className="text-gray-400 text-sm w-[18ch]">
           Focus with soft study music in the background.
         </p>
+        <p className="text-yellow-400 mt-2 text-sm w-[18ch] font-bold">20 ETH</p>
       </div>
       <button
         type="button"
+        onClick={() =>mintingMusic("https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png","Swift","Taylor",2023,"https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png")}
         className="mt-3 text-smtext-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
       >
-        Mint
+       Transfer
       </button>
-    </Link>
+    </div>
   );
 };
 
 const TenthCard = () => {
+  const {mintingMusic} = useContext(DataContext);
   return (
-    <Link
-      href="#"
+    <div
+      
       className="bg-main-lg rounded-lg p-4 hover:bg-main-lgHover transition-all group"
     >
       <div className="mb-4 relative">
@@ -304,22 +333,26 @@ const TenthCard = () => {
         </h5>
         <p className="text-gray-400 text-sm w-[18ch]">
           The perfect study beats. Find your focus, crush your productivity.
+          </p>
+          <p className="text-yellow-400 mt-2 text-sm w-[18ch] font-bold">2 ETH</p>
           <button
             type="button"
+            onClick={() =>mintingMusic("https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png","Swift","Taylor",2023,"https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png")}
             className="mt-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
           >
-            Mint
+           Transfer
           </button>
-        </p>
+      
       </div>
-    </Link>
+    </div>
   );
 };
 
 const EleventhCard = () => {
+  const {mintingMusic} = useContext(DataContext);
   return (
-    <Link
-      href="#"
+    <div
+      
       className="bg-main-lg rounded-lg p-4 hover:bg-main-lgHover transition-all group"
     >
       <div className="mb-4 relative">
@@ -336,21 +369,24 @@ const EleventhCard = () => {
         <p className="text-gray-400 text-sm w-[18ch]">
           Get happy with today&#39;s dose of feel-good songs!
         </p>
+        <p className="text-yellow-400 mt-2 text-sm w-[18ch] font-bold">0.9934 ETH</p>
       </div>
       <button
         type="button"
+        onClick={() =>mintingMusic("https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png","Swift","Taylor",2023,"https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png")}
         className="mt-3 text-smtext-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
       >
-        Mint
+       Transfer
       </button>
-    </Link>
+    </div>
   );
 };
 
 const TwelfthCard = () => {
+  const {mintingMusic} = useContext(DataContext);
   return (
-    <Link
-      href="#"
+    <div
+      
       className="bg-main-lg rounded-lg p-4 hover:bg-main-lgHover transition-all group"
     >
       <div className="mb-4 relative">
@@ -367,21 +403,24 @@ const TwelfthCard = () => {
         <p className="text-gray-400 text-sm w-[18ch]">
           Feel good with this positively timeless playlist!
         </p>
+        <p className="text-yellow-400 mt-2 text-sm w-[18ch] font-bold">1.34 ETH</p>
       </div>
       <button
         type="button"
+        onClick={() =>mintingMusic("https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png","Swift","Taylor",2023,"https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png")}
         className="mt-3 text-smtext-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
       >
-        Mint
+       Transfer
       </button>
-    </Link>
+    </div>
   );
 };
 
 const ThirteenthCard = () => {
+  const {mintingMusic} = useContext(DataContext);
   return (
-    <Link
-      href="#"
+    <div
+      
       className="bg-main-lg rounded-lg p-4 hover:bg-main-lgHover transition-all group"
     >
       <div className="mb-4 relative">
@@ -398,21 +437,24 @@ const ThirteenthCard = () => {
         <p className="text-gray-400 text-sm w-[18ch]">
           Beautifully dark, dramatic tracks.
         </p>
+        <p className="text-yellow-400 mt-2 text-sm w-[18ch] font-bold">10.34 ETH</p>
       </div>
       <button
         type="button"
+        onClick={() =>mintingMusic("https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png","Swift","Taylor",2023,"https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png")}
         className="mt-3 text-smtext-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
       >
-        Mint
+       Transfer
       </button>
-    </Link>
+    </div>
   );
 };
 
 const FourteenthCard = () => {
+  const {mintingMusic} = useContext(DataContext);
   return (
-    <Link
-      href="#"
+    <div
+      
       className="bg-main-lg rounded-lg p-4 hover:bg-main-lgHover transition-all group"
     >
       <div className="mb-4 relative">
@@ -429,21 +471,24 @@ const FourteenthCard = () => {
         <p className="text-gray-400 text-sm w-[18ch]">
           Happy vibes for an upbeat morning.
         </p>
+        <p className="text-yellow-400 mt-2 text-sm w-[18ch] font-bold">2.667 ETH</p>
       </div>
       <button
         type="button"
+        onClick={() =>mintingMusic("https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png","Swift","Taylor",2023,"https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png")}
         className="mt-3 text-smtext-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
       >
-        Mint
+       Transfer
       </button>
-    </Link>
+    </div>
   );
 };
 
 const FifteenthCard = () => {
+  const {mintingMusic} = useContext(DataContext);
   return (
-    <Link
-      href="#"
+    <div
+      
       className="bg-main-lg rounded-lg p-4 hover:bg-main-lgHover transition-all group"
     >
       <div className="mb-4 relative">
@@ -458,21 +503,24 @@ const FifteenthCard = () => {
       <div>
         <h5 className="font-medium text-gray-100 mb-2">Start Nowhere</h5>
         <p className="text-gray-400 text-sm w-[18ch]">Sam Hunt</p>
+        <p className="text-yellow-400 mt-2 text-sm w-[18ch] font-bold">3.34 ETH</p>
       </div>
       <button
         type="button"
+        onClick={() =>mintingMusic("https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png","Swift","Taylor",2023,"https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png")}
         className="mt-3 text-smtext-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
       >
-        Mint
+       Transfer
       </button>
-    </Link>
+    </div>
   );
 };
 
 const SixteenthCard = () => {
+  const {mintingMusic} = useContext(DataContext);
   return (
-    <Link
-      href="#"
+    <div
+      
       className="bg-main-lg rounded-lg p-4 hover:bg-main-lgHover transition-all group"
     >
       <div className="mb-4 relative">
@@ -487,21 +535,24 @@ const SixteenthCard = () => {
       <div>
         <h5 className="font-medium text-gray-100 mb-2">This Is What I Mean</h5>
         <p className="text-gray-400 text-sm w-[18ch]">Stormzy</p>
+        <p className="text-yellow-400 mt-2 text-sm w-[18ch] font-bold">10.34 ETH</p>
       </div>
       <button
         type="button"
+        onClick={() =>mintingMusic("https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png","Swift","Taylor",2023,"https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png")}
         className="mt-3 text-smtext-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
       >
-        Mint
+       Transfer
       </button>
-    </Link>
+    </div>
   );
 };
 
 const SeventeenthCard = () => {
+  const {mintingMusic} = useContext(DataContext);
   return (
-    <Link
-      href="#"
+    <div
+      
       className="bg-main-lg rounded-lg p-4 hover:bg-main-lgHover transition-all group"
     >
       <div className="mb-4 relative">
@@ -516,21 +567,24 @@ const SeventeenthCard = () => {
       <div>
         <h5 className="font-medium text-gray-100 mb-2">Love Sux (Deluxe)</h5>
         <p className="text-gray-400 text-sm w-[18ch]">Avril Lavigne</p>
+        <p className="text-yellow-400 mt-2 text-sm w-[18ch] font-bold">2.34 ETH</p>
       </div>
       <button
         type="button"
+        onClick={() =>mintingMusic("https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png","Swift","Taylor",2023,"https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png")}
         className="mt-3 text-smtext-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg  px-5 py-1 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
       >
-        Mint
+       Transfer
       </button>
-    </Link>
+    </div>
   );
 };
 
 const EighteenthCard = () => {
+  const {mintingMusic} = useContext(DataContext);
   return (
-    <Link
-      href="#"
+    <div
+      
       className="bg-main-lg rounded-lg p-4 hover:bg-main-lgHover transition-all group"
     >
       <div className="mb-4 relative">
@@ -548,14 +602,16 @@ const EighteenthCard = () => {
           Soundtrack]
         </h5>
         <p className="text-gray-400 text-sm w-[18ch]">Jung Kook, BTS</p>
+        <p className="text-yellow-400 mt-2 text-sm w-[18ch] font-bold">20.34 ETH</p>
         <button
           type="button"
+          onClick={() =>mintingMusic("https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png","Swift","Taylor",2023,"https://cdn.discordapp.com/attachments/1043267593441656924/1045822509620138066/image.png")}
           className="text-white mt-3 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
         >
-          Mint
+         Transfer
         </button>
       </div>
-    </Link>
+    </div>
   );
 };
 

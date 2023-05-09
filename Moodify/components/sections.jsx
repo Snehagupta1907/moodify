@@ -32,7 +32,7 @@ const FirstSection = (props) => {
           href="/"
           className="text-2xl font-bold text-white hover:underline"
         >
-          {title}
+          {title} 
         </Link>
       
       </div>
