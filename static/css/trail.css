@@ -14,15 +14,24 @@ body {
   left: 0;
   top: 0;
   bottom: 0;
-  width: 196px;
+  width: 100%;
   background-color: #000000;
   padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sidebar .logo img {
   width: 130px;
 }
-
+.navigation {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .sidebar .navigation ul {
   list-style: none;
   margin-top: 20px;
