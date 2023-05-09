@@ -6,12 +6,13 @@ from keras.utils import img_to_array
 import cv2
 import numpy as np
 import os 
+import config
 from mood_playlist import get_playlist_id_for_mood
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
-client_id = '40058f3d1557477cb3176fb9c2a7dd6e'
-client_secret = '4fa92785b1f44c1f8be34676eb7d0f05'
+client_id = config.client_id
+client_secret = config.client_secret
 
     # Authenticate with Spotify API
 client_credentials_manager = SpotifyClientCredentials(client_id, client_secret)
@@ -38,9 +39,9 @@ app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 mood_playlists = {
     'Disgust': get_playlist_id_for_mood('lofi', sp),
     'Fear': get_playlist_id_for_mood('calm', sp),
-    'Happy': get_playlist_id_for_mood('energetic', sp),
+    'Happy': get_playlist_id_for_mood('happy pop', sp),
     'Neutral': get_playlist_id_for_mood('playful', sp),
-    'Sad': get_playlist_id_for_mood('happiness', sp),
+    'Sad': get_playlist_id_for_mood('happy', sp),
     'Surprise': get_playlist_id_for_mood('surprise', sp),
     'Angry': get_playlist_id_for_mood('lofi hindi', sp)
 }

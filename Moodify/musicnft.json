@@ -1,0 +1,26 @@
+{
+    "name": "Jumme Jo Pathan",
+    "artist": "Arjit Singh , Vishal Dadlani",
+    "image": "",
+    "attributes": [{
+        "trait_type": "Tempo",
+        "value": 171,
+        "max_value": 200
+
+    }, {
+        "trait_type": "Duration",
+        "value": 202
+       
+
+    }, {
+        "trait_type": "Loudness",
+        "value": 5.9
+   
+
+    }, {
+        "trait_type": "Danceability",
+        "value": 0.514,
+        "max_value": 1
+
+    }]
+}
